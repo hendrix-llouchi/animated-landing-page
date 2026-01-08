@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+:root {
+  --bg-primary: #0a0f1a;
+  --bg-secondary: #050810;
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --accent-red: #db0a40;
+  --accent-blue: #1e3a5f;
+  --accent-silver: #c0c0c0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
+}
+
+/* Typography */
+@layer components {
+  .heading-xl {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none;
+  }
+
+  .heading-lg {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight;
+  }
+
+  .body-lg {
+    @apply text-lg md:text-xl font-light leading-relaxed;
+  }
+
+  .body-md {
+    @apply text-base md:text-lg font-normal leading-relaxed;
+  }
+}
+
+/* Loading Animation */
+.loading-bar {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-blue),
+    var(--accent-silver),
+    var(--accent-blue),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Glow Effects */
+.glow-red {
+  text-shadow: 0 0 40px rgba(219, 10, 64, 0.5),
+               0 0 80px rgba(219, 10, 64, 0.3),
+               0 0 120px rgba(219, 10, 64, 0.1);
+}
+
+.glow-blue {
+  text-shadow: 0 0 40px rgba(30, 58, 95, 0.5),
+               0 0 80px rgba(30, 58, 95, 0.3);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 50%, #1e3a5f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-red {
+  background: linear-gradient(135deg, #ffffff 0%, #db0a40 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation Utilities */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Canvas Container */
+.canvas-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.canvas-container canvas {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Text Overlay Styles */
+.text-overlay {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-full;
+  @apply hover:from-red-500 hover:to-red-600 transition-all duration-300;
+  @apply shadow-lg shadow-red-600/30 hover:shadow-red-500/50;
+  @apply transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 border border-white/20 text-white font-semibold rounded-full;
+  @apply hover:bg-white/10 transition-all duration-300;
+  @apply backdrop-blur-sm;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
