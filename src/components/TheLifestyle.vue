@@ -23,7 +23,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="space-y-8">
           <div class="aspect-[4/5] rounded-lg overflow-hidden relative group">
-            <img src="/images/red bull.jpg" alt="Oracle Red Bull Racing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?w=1920&q=80&auto=format&fit=crop" alt="Oracle Red Bull Racing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
               <span class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Motorsports</span>
               <h3 class="text-3xl font-bold text-white">Oracle Red Bull Racing</h3>
@@ -31,7 +31,7 @@
           </div>
           
           <div class="aspect-square rounded-lg overflow-hidden relative group">
-             <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&q=80" alt="Skiing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+             <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1920&q=80&auto=format&fit=crop" alt="Skiing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
               <span class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-2">Winter Sports</span>
               <h3 class="text-3xl font-bold text-white">The Hahnenkamm</h3>
@@ -41,7 +41,7 @@
 
         <div class="space-y-8 md:mt-20">
           <div class="aspect-square rounded-lg overflow-hidden relative group">
-             <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80" alt="Breakdance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+             <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1920&q=80&auto=format&fit=crop" alt="Breakdance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
               <span class="text-yellow-400 font-bold uppercase tracking-widest text-sm mb-2">Culture</span>
               <h3 class="text-3xl font-bold text-white">Red Bull Dance Your Style</h3>
@@ -49,7 +49,7 @@
           </div>
 
           <div class="aspect-[4/5] rounded-lg overflow-hidden relative group">
-             <img src="/images/red bull cliff diving.jpg" alt="Cliff Diving" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+             <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1920&q=80&auto=format&fit=crop" alt="Cliff Diving" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
               <span class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Water</span>
               <h3 class="text-3xl font-bold text-white">Cliff Diving Series</h3>
