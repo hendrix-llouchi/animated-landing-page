@@ -6,15 +6,15 @@
       :class="{ 'py-4 bg-[#0a0f1a]/80 backdrop-blur-md border-b border-white/5': isScrolled, 'py-8': !isScrolled }"
     >
       <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-           <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">
+        <router-link to="/" class="flex items-center gap-3 group">
+           <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">
              <span class="font-black text-[10px]">RB</span>
            </div>
            <span class="font-bold tracking-tight">Red Bull</span>
-        </div>
+        </router-link>
         <div class="hidden md:flex items-center gap-8">
           <a href="#" class="text-sm font-medium text-white/60 hover:text-white transition-colors">Products</a>
-          <a href="#" class="text-sm font-medium text-white/60 hover:text-white transition-colors">World</a>
+          <router-link to="/world" class="text-sm font-medium text-white/60 hover:text-white transition-colors" active-class="text-white">World</router-link>
           <button class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors">
             Shop
           </button>
@@ -24,17 +24,11 @@
 
     <!-- Content -->
     <main>
-      <TheHero />
-      <TheFeatures />
-      
-      <!-- The Optimized Can Experience -->
-      <div class="relative">
-        <RedBullScroll /> 
-        <!-- RedBullScroll handles its own text overlays internally, 
-             so we just place it here as a major section -->
-      </div>
-
-      <TheLifestyle />
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
 
     <TheFooter />
@@ -44,11 +38,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import Lenis from '@studio-freight/lenis'
-import TheHero from './components/TheHero.vue'
-import TheFeatures from './components/TheFeatures.vue'
-import TheLifestyle from './components/TheLifestyle.vue'
 import TheFooter from './components/TheFooter.vue'
-import RedBullScroll from './components/RedBullScroll.vue'
 
 const isScrolled = ref(false)
 let lenis
@@ -100,5 +90,15 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

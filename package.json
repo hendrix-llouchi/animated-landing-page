@@ -12,7 +12,8 @@
     "@studio-freight/lenis": "^1.0.42",
     "@vueuse/core": "^10.7.0",
     "@vueuse/motion": "^2.1.0",
-    "vue": "^3.4.0"
+    "vue": "^3.4.0",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",
