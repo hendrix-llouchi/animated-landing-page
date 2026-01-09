@@ -1,5 +1,5 @@
 <template>
-  <section class="py-40 bg-[#0a0f1a] relative overflow-hidden">
+  <section class="pt-64 pb-40 bg-[#0a0f1a] relative overflow-hidden">
     <!-- Marquee Text -->
     <div class="absolute top-0 left-0 w-full overflow-hidden opacity-5 pointer-events-none">
       <div class="whitespace-nowrap animate-marquee text-[20vw] font-black text-white uppercase leading-none">
